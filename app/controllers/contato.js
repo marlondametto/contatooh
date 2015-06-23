@@ -8,6 +8,7 @@ module.exports = function(app) {
 
 	controller.listaContatos = 
 		function(req, res) {
+			
 			var promisse = Contato.find().populate('emergencia')
 				.exec()
 				.then(
@@ -19,6 +20,7 @@ module.exports = function(app) {
 						res.status(500).json(erro);
 					}
 					);
+					
 		};
 
 	controller.obtemContato = 
