@@ -11,7 +11,17 @@ before_install:
  - webdriver-manager update
  - bower install
 before_script:
+ - node test/data.js
  - grunt
  - cd dist
 script:
  - karma start karma.config.js --single-run --browsers PhantomJS
+ - node server &
+ - protractor app/config/protractor
+env:
+ global:
+ - NODE_ENV: test
+addons:
+ sauce_connect: true
+services:
+ - mongodb
