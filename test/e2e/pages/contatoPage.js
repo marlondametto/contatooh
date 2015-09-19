@@ -7,7 +7,7 @@ var contatoPage = function() {
 	
 	this.digitarNome = function(nome) {
 		element(by.model('contato.nome')).sendKeys(nome);
-	} ;
+	};
 	
 	this.digitarEmail = function(email) {
 		element(by.model('contato.email')).sendKeys(email);
