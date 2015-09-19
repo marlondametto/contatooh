@@ -15,7 +15,7 @@ exports.config = {
 
 
 
-	specs: ['../../test/e2e/**/*.js'],
+	specs: ['../../test/e2e/**/*Spec.js'],
 	onPrepare: function() {
 		browser.get('http://localhost:3000');
 		element(by.id('entrar')).click();
